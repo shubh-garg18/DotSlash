@@ -25,3 +25,29 @@ const io = new Server(server, {
 })
 
 let userSocketMap: User[] = []
+
+function getUsersInRoom(roomId: string): User[] {
+	return userSocketMap.filter((user) => user.roomId == roomId)
+}
+
+// Function to get room id by socket id
+function getRoomId(socketId: SocketId): string | null {
+	const roomId = userSocketMap.find(
+		(user) => user.socketId === socketId
+	)?.roomId
+
+	if (!roomId) {
+		console.error("Room ID is undefined for socket ID:", socketId)
+		return null
+	}
+	return roomId
+}
+
+function getUserBySocketId(socketId: SocketId): User | null {
+	const user = userSocketMap.find((user) => user.socketId === socketId)
+	if (!user) {
+		console.error("User not found for socket ID:", socketId)
+		return null
+	}
+	return user
+}
