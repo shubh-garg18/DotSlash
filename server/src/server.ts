@@ -79,9 +79,8 @@ io.on("connection", (socket) => {
 		const users = getUsersInRoom(roomId)
 		io.to(socket.id).emit(SocketEvent.JOIN_ACCEPTED, { user, users })
 	})
-})
 
-socket.on("disconnecting", () => {
+    socket.on("disconnecting", () => {
 		const user = getUserBySocketId(socket.id)
 		if (!user) return
 		const roomId = user.roomId
@@ -103,3 +102,6 @@ socket.on("disconnecting", () => {
 			})
 		}
 	)
+})
+
+
