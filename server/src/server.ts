@@ -80,3 +80,26 @@ io.on("connection", (socket) => {
 		io.to(socket.id).emit(SocketEvent.JOIN_ACCEPTED, { user, users })
 	})
 })
+
+socket.on("disconnecting", () => {
+		const user = getUserBySocketId(socket.id)
+		if (!user) return
+		const roomId = user.roomId
+		socket.broadcast
+			.to(roomId)
+			.emit(SocketEvent.USER_DISCONNECTED, { user })
+		userSocketMap = userSocketMap.filter((u) => u.socketId !== socket.id)
+		socket.leave(roomId)
+	})
+
+	// Handle file actions
+	socket.on(
+		SocketEvent.SYNC_FILE_STRUCTURE,
+		({ fileStructure, openFiles, activeFile, socketId }) => {
+			io.to(socketId).emit(SocketEvent.SYNC_FILE_STRUCTURE, {
+				fileStructure,
+				openFiles,
+				activeFile,
+			})
+		}
+	)
