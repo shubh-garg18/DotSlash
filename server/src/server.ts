@@ -5,6 +5,7 @@ import cors from "cors"
 import path from "path"
 import { Server } from "socket.io"
 import { USER_CONNECTION_STATUS, User } from "./types/user"
+import { SocketEvent, SocketId } from "./types/socket"
 
 dotenv.config()
 
@@ -51,3 +52,31 @@ function getUserBySocketId(socketId: SocketId): User | null {
 	}
 	return user
 }
+
+io.on("connection", (socket) => {
+    socket.on(SocketEvent.JOIN_REQUEST, ({ roomId, username }) => {
+		// Check is username exist in the room
+		const isUsernameExist = getUsersInRoom(roomId).filter(
+			(u) => u.username === username
+		)
+		if (isUsernameExist.length > 0) {
+			io.to(socket.id).emit(SocketEvent.USERNAME_EXISTS)
+			return
+		}
+
+		const user = {
+			username,
+			roomId,
+			status: USER_CONNECTION_STATUS.ONLINE,
+			cursorPosition: 0,
+			typing: false,
+			socketId: socket.id,
+			currentFile: null,
+		}
+		userSocketMap.push(user)
+		socket.join(roomId)
+		socket.broadcast.to(roomId).emit(SocketEvent.USER_JOINED, { user })
+		const users = getUsersInRoom(roomId)
+		io.to(socket.id).emit(SocketEvent.JOIN_ACCEPTED, { user, users })
+	})
+})
