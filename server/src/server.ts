@@ -1,3 +1,5 @@
+
+
 import express, { Response, Request } from "express"
 import dotenv from "dotenv"
 import http from "http"
@@ -114,6 +116,16 @@ io.on("connection", (socket) => {
 			})
 		}
 	)
+
+	socket.on(SocketEvent.DIRECTORY_UPDATED, ({ dirId, children }) => {
+		const roomId = getRoomId(socket.id)
+		if (!roomId) return
+		socket.broadcast.to(roomId).emit(SocketEvent.DIRECTORY_UPDATED, {
+			dirId,
+			children,
+		})
+	})
+
 
 })
 
