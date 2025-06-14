@@ -102,6 +102,19 @@ io.on("connection", (socket) => {
 			})
 		}
 	)
+
+	socket.on(
+		SocketEvent.DIRECTORY_CREATED,
+		({ parentDirId, newDirectory }) => {
+			const roomId = getRoomId(socket.id)
+			if (!roomId) return
+			socket.broadcast.to(roomId).emit(SocketEvent.DIRECTORY_CREATED, {
+				parentDirId,
+				newDirectory,
+			})
+		}
+	)
+
 })
 
 
