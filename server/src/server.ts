@@ -103,7 +103,44 @@ io.on("connection", (socket) => {
 		}
 	)
 
-    
-})
+	socket.on(
+		SocketEvent.DIRECTORY_CREATED,
+		({ parentDirId, newDirectory }) => {
+			const roomId = getRoomId(socket.id)
+			if (!roomId) return
+			socket.broadcast.to(roomId).emit(SocketEvent.DIRECTORY_CREATED, {
+				parentDirId,
+				newDirectory,
+			})
+		}
+	)
 
+	socket.on(SocketEvent.DIRECTORY_UPDATED, ({ dirId, children }) => {
+		const roomId = getRoomId(socket.id)
+		if (!roomId) return
+		socket.broadcast.to(roomId).emit(SocketEvent.DIRECTORY_UPDATED, {
+			dirId,
+			children,
+		})
+	})
+
+	socket.on(SocketEvent.DIRECTORY_RENAMED, ({ dirId, newName }) => {
+		const roomId = getRoomId(socket.id)
+		if (!roomId) return
+		socket.broadcast.to(roomId).emit(SocketEvent.DIRECTORY_RENAMED, {
+			dirId,
+			newName,
+		})
+	})
+
+	socket.on(SocketEvent.DIRECTORY_DELETED, ({ dirId }) => {
+		const roomId = getRoomId(socket.id)
+		if (!roomId) return
+		socket.broadcast
+			.to(roomId)
+			.emit(SocketEvent.DIRECTORY_DELETED, { dirId })
+	})
+
+
+})
 
