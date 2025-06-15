@@ -133,6 +133,15 @@ io.on("connection", (socket) => {
 		})
 	})
 
+	socket.on(SocketEvent.DIRECTORY_DELETED, ({ dirId }) => {
+		const roomId = getRoomId(socket.id)
+		if (!roomId) return
+		socket.broadcast
+			.to(roomId)
+			.emit(SocketEvent.DIRECTORY_DELETED, { dirId })
+	})
+
+
 })
 
 
