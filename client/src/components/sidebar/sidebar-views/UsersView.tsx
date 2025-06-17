@@ -45,37 +45,58 @@ function UsersView() {
     }
 
     return (
-        <div className="flex flex-col p-4" style={{ height: viewHeight }}>
-            <h1 className="view-title">Users</h1>
+        <div className="flex flex-col p-6" style={{ height: viewHeight }}>
+            {/* Enhanced title */}
+            <h1 className="text-2xl font-mono font-bold text-white mb-6">
+                <span className="text-blue-400">.</span>
+                <span className="text-gray-300">/</span>
+                <span className="text-purple-400">users</span>
+            </h1>
+            
             {/* List of connected users */}
-            <Users />
-            <div className="flex flex-col items-center gap-4 pt-4">
-                <div className="flex w-full gap-4">
+            <div className="flex-1 mb-6">
+                <Users />
+            </div>
+            
+            {/* Action buttons */}
+            <div className="flex flex-col items-center gap-4">
+                <div className="flex w-full gap-3">
                     {/* Share URL button */}
                     <button
-                        className="flex flex-grow items-center justify-center rounded-md bg-white p-3 text-black"
+                        className="flex flex-grow items-center justify-center gap-2 rounded-lg bg-[#161b22] hover:bg-[#21262d] border border-gray-600 hover:border-gray-500 p-4 text-gray-300 hover:text-white transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-lg"
                         onClick={shareURL}
-                        title="Share Link"
+                        title="Share Room Link"
                     >
-                        <IoShareOutline size={26} />
+                        <IoShareOutline size={20} />
+                        <span className="font-mono text-sm hidden sm:inline">Share</span>
                     </button>
+                    
                     {/* Copy URL button */}
                     <button
-                        className="flex flex-grow items-center justify-center rounded-md bg-white p-3 text-black"
+                        className="flex flex-grow items-center justify-center gap-2 rounded-lg bg-[#161b22] hover:bg-[#21262d] border border-gray-600 hover:border-gray-500 p-4 text-gray-300 hover:text-white transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-lg"
                         onClick={copyURL}
-                        title="Copy Link"
+                        title="Copy Room Link"
                     >
-                        <LuCopy size={22} />
+                        <LuCopy size={18} />
+                        <span className="font-mono text-sm hidden sm:inline">Copy</span>
                     </button>
+                    
                     {/* Leave room button */}
                     <button
-                        className="flex flex-grow items-center justify-center rounded-md bg-primary p-3 text-black"
+                        className="flex flex-grow items-center justify-center gap-2 rounded-lg bg-red-600 hover:bg-red-700 border border-red-500 p-4 text-white transition-all duration-200 transform hover:scale-105 active:scale-95 shadow-lg hover:shadow-red-600/25"
                         onClick={leaveRoom}
-                        title="Leave room"
+                        title="Leave Room"
                     >
-                        <GoSignOut size={22} />
+                        <GoSignOut size={20} />
+                        <span className="font-mono text-sm hidden sm:inline">Leave</span>
                     </button>
                 </div>
+                
+                {/* Subtle hint text */}
+                <p className="text-xs text-gray-500 font-mono text-center">
+                    <span className="text-green-500">// </span>
+                    Share the room link to invite collaborators
+                </p>
             </div>
         </div>
     )
