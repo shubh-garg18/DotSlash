@@ -1,4 +1,4 @@
-import  { useState } from "react"
+import { useState } from "react"
 import FileStructureView from "@/components/files/FileStructureView"
 import { useFileSystem } from "@/context/FileContext"
 import useResponsive from "@/hooks/useResponsive"
@@ -11,8 +11,7 @@ import { toast } from "react-hot-toast"
 
 function FilesView() {
     const { downloadFilesAndFolders, updateDirectory } = useFileSystem()
-    const { viewHeight } = useResponsive()
-    const { minHeightReached } = useResponsive()
+    const { viewHeight, minHeightReached } = useResponsive()
     const [isLoading, setIsLoading] = useState(false)
 
     const handleOpenDirectory = async () => {
@@ -26,7 +25,7 @@ function FilesView() {
                 return
             }
 
-            // Fallback for browsers without `showDirectoryPicker`
+            // Fallback for browsers without showDirectoryPicker
             if ("webkitdirectory" in HTMLInputElement.prototype) {
                 const fileInput = document.createElement("input")
                 fileInput.type = "file"
@@ -168,36 +167,37 @@ function FilesView() {
         try {
             return await file.text()
         } catch (error) {
-            console.error(`Error reading file ${file.name}:`, error)
-            return `Error reading file: ${file.name}`
+            console.error(Error reading file ${file.name}:, error)
+            return Error reading file: ${file.name}
         }
     }
 
     return (
         <div
-            className="flex select-none flex-col gap-1 px-4 py-2"
+            className="flex select-none flex-col gap-1 px-4 py-2 bg-[#161b22] border border-gray-700 rounded-lg shadow-lg"
             style={{ height: viewHeight, maxHeight: viewHeight }}
         >
             <FileStructureView />
             <div
-                className={cn(`flex min-h-fit flex-col justify-end pt-2`, {
+                className={cn(flex min-h-fit flex-col justify-end pt-2, {
                     hidden: minHeightReached,
                 })}
             >
-                <hr />
+                <hr className="border-gray-700" />
                 <button
-                    className="mt-2 flex w-full justify-start rounded-md p-2 transition-all hover:bg-darkHover"
+                    className="mt-2 flex w-full justify-start rounded-md p-3 bg-[#0d1117] border border-gray-600 text-gray-300 font-mono transition-all hover:bg-[#1c2128] hover:border-gray-500 hover:text-white disabled:opacity-50 disabled:cursor-not-allowed"
                     onClick={handleOpenDirectory}
                     disabled={isLoading}
                 >
-                    <TbFileUpload className="mr-2" size={24} />
+                    <TbFileUpload className="mr-3" size={18} />
                     {isLoading ? "Loading..." : "Open File/Folder"}
                 </button>
                 <button
-                    className="flex w-full justify-start rounded-md p-2 transition-all hover:bg-darkHover"
+                    className="flex w-full justify-start rounded-md p-3 bg-[#0d1117] border border-gray-600 text-gray-300 font-mono transition-all hover:bg-[#1c2128] hover:border-gray-500 hover:text-white"
                     onClick={downloadFilesAndFolders}
                 >
-                    <BiArchiveIn className="mr-2" size={22} /> Download Code
+                    <BiArchiveIn className="mr-3" size={18} /> 
+                    Download Code
                 </button>
             </div>
         </div>
