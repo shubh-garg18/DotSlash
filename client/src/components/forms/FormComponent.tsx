@@ -100,11 +100,7 @@ const FormComponent = () => {
         if (status === USER_STATUS.JOINED && !isRedirect) {
             const username = currentUser.username
             sessionStorage.setItem("redirect", "true")
-<<<<<<< HEAD
             navigate(`/editor/${currentUser.roomId}`, {
-=======
-            navigate(/editor/${currentUser.roomId}, {
->>>>>>> 6550d6090e7d5041bce090885c62d41b6a74a8dd
                 state: { username },
             })
         } else if (status === USER_STATUS.JOINED && isRedirect) {
@@ -130,9 +126,12 @@ const FormComponent = () => {
 
     return (
         <div className="w-full max-w-lg relative">
+            {/* Subtle background glow */}
             <div className="absolute inset-0 bg-blue-500/5 rounded-2xl blur-3xl"></div>
             
+            {/* Editor-style container */}
             <div className="relative bg-[#161b22] border border-gray-700 rounded-xl overflow-hidden shadow-2xl backdrop-blur-sm">
+                {/* Enhanced editor header */}
                 <div className="bg-[#0d1117] border-b border-gray-700 px-6 py-3">
                     <div className="flex items-center justify-between">
                         <div className="flex items-center gap-4">
@@ -145,11 +144,7 @@ const FormComponent = () => {
                             </div>
                         </div>
                         <div className="flex items-center gap-2">
-<<<<<<< HEAD
                             <div className={`w-2 h-2 rounded-full ${connectionStatus.color} ${status === USER_STATUS.ATTEMPTING_JOIN ? 'animate-pulse' : ''}`}></div>
-=======
-                            <div className={w-2 h-2 rounded-full ${connectionStatus.color} ${status === USER_STATUS.ATTEMPTING_JOIN ? 'animate-pulse' : ''}}></div>
->>>>>>> 6550d6090e7d5041bce090885c62d41b6a74a8dd
                             <span className="text-xs font-mono text-gray-500">{connectionStatus.text}</span>
                         </div>
                     </div>
@@ -170,7 +165,9 @@ const FormComponent = () => {
                         </p>
                     </div>
 
+                    {/* Enhanced form with line numbers */}
                     <form onSubmit={joinRoom} className="space-y-6">
+                        {/* Room ID input */}
                         <div className="flex group">
                             <div className="w-10 text-gray-600 text-sm font-mono text-right pr-4 pt-2 select-none group-hover:text-gray-500 transition-colors">
                                 01
@@ -204,6 +201,7 @@ const FormComponent = () => {
                             </div>
                         </div>
 
+                        {/* Username input */}
                         <div className="flex group">
                             <div className="w-10 text-gray-600 text-sm font-mono text-right pr-4 pt-2 select-none group-hover:text-gray-500 transition-colors">
                                 02
@@ -237,7 +235,7 @@ const FormComponent = () => {
                             </div>
                         </div>
 
-
+                        {/* Join button */}
                         <div className="flex group">
                             <div className="w-10 text-gray-600 text-sm font-mono text-right pr-4 pt-2 select-none group-hover:text-gray-500 transition-colors">
                                 03
@@ -262,6 +260,7 @@ const FormComponent = () => {
                             </div>
                         </div>
 
+                        {/* Generate room ID */}
                         <div className="flex group">
                             <div className="w-10 text-gray-600 text-sm font-mono text-right pr-4 pt-2 select-none group-hover:text-gray-500 transition-colors">
                                 04
@@ -289,6 +288,7 @@ const FormComponent = () => {
                     </form>
                 </div>
 
+                {/* Enhanced status bar */}
                 <div className="bg-[#0d1117] border-t border-gray-700 px-6 py-3">
                     <div className="flex justify-between items-center text-xs font-mono text-gray-500">
                         <div className="flex items-center gap-4">
