@@ -100,7 +100,11 @@ const FormComponent = () => {
         if (status === USER_STATUS.JOINED && !isRedirect) {
             const username = currentUser.username
             sessionStorage.setItem("redirect", "true")
+<<<<<<< HEAD
+            navigate(`/editor/${currentUser.roomId}`, {
+=======
             navigate(/editor/${currentUser.roomId}, {
+>>>>>>> 6550d6090e7d5041bce090885c62d41b6a74a8dd
                 state: { username },
             })
         } else if (status === USER_STATUS.JOINED && isRedirect) {
@@ -141,7 +145,11 @@ const FormComponent = () => {
                             </div>
                         </div>
                         <div className="flex items-center gap-2">
+<<<<<<< HEAD
+                            <div className={`w-2 h-2 rounded-full ${connectionStatus.color} ${status === USER_STATUS.ATTEMPTING_JOIN ? 'animate-pulse' : ''}`}></div>
+=======
                             <div className={w-2 h-2 rounded-full ${connectionStatus.color} ${status === USER_STATUS.ATTEMPTING_JOIN ? 'animate-pulse' : ''}}></div>
+>>>>>>> 6550d6090e7d5041bce090885c62d41b6a74a8dd
                             <span className="text-xs font-mono text-gray-500">{connectionStatus.text}</span>
                         </div>
                     </div>
