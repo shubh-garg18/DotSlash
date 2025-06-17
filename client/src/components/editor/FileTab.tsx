@@ -69,15 +69,18 @@ function FileTab() {
 
     return (
         <div
-            className="flex h-[50px] w-full select-none gap-2 overflow-x-auto p-2 pb-0"
+            className="flex h-[50px] w-full select-none gap-2 overflow-x-auto p-2 pb-0 bg-[#0d1117] border-b border-gray-700"
             ref={fileTabRef}
         >
             {openFiles.map((file) => (
                 <span
                     key={file.id}
                     className={cn(
-                        "flex w-fit cursor-pointer items-center rounded-t-md px-2 py-1 text-white",
-                        { "bg-darkHover": file.id === activeFile?.id },
+                        "flex w-fit cursor-pointer items-center rounded-t-md px-3 py-2 text-white border-t border-l border-r border-gray-700 hover:bg-[#161b22] transition-colors",
+                        { 
+                            "bg-[#161b22] border-gray-600": file.id === activeFile?.id,
+                            "bg-[#0d1117]": file.id !== activeFile?.id
+                        }
                     )}
                     onClick={() => changeActiveFile(file.id)}
                 >
@@ -87,15 +90,18 @@ function FileTab() {
                         className="mr-2 min-w-fit"
                     />
                     <p
-                        className="flex-grow cursor-pointer overflow-hidden truncate"
+                        className="flex-grow cursor-pointer overflow-hidden truncate text-sm"
                         title={file.name}
                     >
                         {file.name}
                     </p>
                     <IoClose
-                        className="ml-3 inline rounded-md hover:bg-darkHover"
+                        className="ml-3 inline rounded-md hover:bg-gray-700 p-1 transition-colors"
                         size={20}
-                        onClick={() => closeFile(file.id)}
+                        onClick={(e) => {
+                            e.stopPropagation()
+                            closeFile(file.id)
+                        }}
                     />
                 </span>
             ))}

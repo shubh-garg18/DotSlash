@@ -79,19 +79,22 @@ function Editor() {
     }, [filteredUsers, language])
 
     return (
-        <CodeMirror
-            theme={editorThemes[theme]}
-            onChange={onCodeChange}
-            value={activeFile?.content}
-            extensions={extensions}
-            minHeight="100%"
-            maxWidth="100vw"
-            style={{
-                fontSize: fontSize + "px",
-                height: viewHeight,
-                position: "relative",
-            }}
-        />
+        <div className="flex-1 bg-[#0d1117] border-t border-gray-700 rounded-b-lg overflow-hidden">
+            <CodeMirror
+                theme={editorThemes[theme]}
+                onChange={onCodeChange}
+                value={activeFile?.content}
+                extensions={extensions}
+                minHeight="100%"
+                maxWidth="100vw"
+                style={{
+                    fontSize: fontSize + "px",
+                    height: viewHeight,
+                    position: "relative",
+                    backgroundColor: "#0d1117",
+                }}
+            />
+        </div>
     )
 }
 
