@@ -17,7 +17,7 @@ function CopilotView() {
 
     const copyOutput = async () => {
         try {
-            const content = output.replace(/[\w]*\n?/g, "").trim()
+            const content = output.replace(/```[\w]*\n?/g, "").trim()
             await navigator.clipboard.writeText(content)
             toast.success("Output copied to clipboard")
         } catch (error) {
@@ -31,7 +31,7 @@ function CopilotView() {
             const fileContent = activeFile.content
                 ? `${activeFile.content}\n`
                 : ""
-            const content = `${fileContent}${output.replace(/[\w]*\n?/g, "").trim()}`
+            const content = `${fileContent}${output.replace(/```[\w]*\n?/g, "").trim()}`
             updateFileContent(activeFile.id, content)
             setActiveFile({ ...activeFile, content })
             toast.success("Code pasted successfully")
@@ -45,7 +45,7 @@ function CopilotView() {
     const replaceCodeInFile = () => {
         if (activeFile) {
             const isConfirmed = confirm(
-                Are you sure you want to replace the code in the file?,
+                `Are you sure you want to replace the code in the file?`,
             )
             if (!isConfirmed) return
             const content = output.replace(/```[\w]*\n?/g, "").trim()

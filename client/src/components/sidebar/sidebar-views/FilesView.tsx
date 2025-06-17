@@ -25,7 +25,7 @@ function FilesView() {
                 return
             }
 
-            // Fallback for browsers without showDirectoryPicker
+            // Fallback for browsers without `showDirectoryPicker`
             if ("webkitdirectory" in HTMLInputElement.prototype) {
                 const fileInput = document.createElement("input")
                 fileInput.type = "file"
@@ -167,8 +167,8 @@ function FilesView() {
         try {
             return await file.text()
         } catch (error) {
-            console.error(Error reading file ${file.name}:, error)
-            return Error reading file: ${file.name}
+            console.error(`Error reading file ${file.name}:`, error)
+            return `Error reading file: ${file.name}`
         }
     }
 
@@ -179,7 +179,7 @@ function FilesView() {
         >
             <FileStructureView />
             <div
-                className={cn(flex min-h-fit flex-col justify-end pt-2, {
+                className={cn(`flex min-h-fit flex-col justify-end pt-2`, {
                     hidden: minHeightReached,
                 })}
             >
