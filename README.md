@@ -152,12 +152,12 @@ Special thanks to:
   <tbody>
     <tr>
       <td align="center" valign="top">
-        <img src="https://github.com/tanishq-t/](https://github.com/tanishq-t/DotSlash/blob/main/screenshots/me.png" width="120px;" alt="Tanishq Tyagi"/>
+        <img src="https://github.com/tanishq-t/DotSlash/blob/main/screenshots/me.png" width="120px;" alt="Tanishq Tyagi"/>
         <br />
         <b>Tanishq Tyagi</b>
       </td>
       <td align="center" valign="top">
-        <img src="https://github.com/shubhgarg.png](https://github.com/tanishq-t/DotSlash/blob/main/screenshots/shubh.png" width="120px;" alt="Shubh Garg"/>
+        <img src="https://github.com/tanishq-t/DotSlash/blob/main/screenshots/shubh.png" width="120px;" alt="Shubh Garg"/>
         <br />
         <b>Shubh Garg</b>
       </td>
