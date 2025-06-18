@@ -152,12 +152,12 @@ Special thanks to:
   <tbody>
     <tr>
       <td align="center" valign="top">
-        <img src="https://github.com/tanishqtyagi.png" width="120px;" alt="Tanishq Tyagi"/>
+        <img src="https://github.com/tanishq-t/](https://github.com/tanishq-t/DotSlash/blob/main/screenshots/me.png" width="120px;" alt="Tanishq Tyagi"/>
         <br />
         <b>Tanishq Tyagi</b>
       </td>
       <td align="center" valign="top">
-        <img src="https://github.com/shubhgarg.png" width="120px;" alt="Shubh Garg"/>
+        <img src="https://github.com/shubhgarg.png](https://github.com/tanishq-t/DotSlash/blob/main/screenshots/shubh.png" width="120px;" alt="Shubh Garg"/>
         <br />
         <b>Shubh Garg</b>
       </td>
@@ -168,7 +168,7 @@ Special thanks to:
             <img src="https://img.shields.io/badge/GitHub-100000.svg?style=for-the-badge&logo=github&logoColor=white"/>
             </a>
             <br/>
-            <a href="https://linkedin.com/in/tanishq-t">
+            <a href="https://www.linkedin.com/in/tanishq-tyagi-1b5234289/">
             <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"/>
             </a>
         </td>
@@ -177,7 +177,7 @@ Special thanks to:
             <img src="https://img.shields.io/badge/GitHub-100000.svg?style=for-the-badge&logo=github&logoColor=white"/>
             </a>
             <br/>
-            <a href="https://linkedin.com/in/shubh-garg18">
+            <a href="https://www.linkedin.com/in/shubh-garg-a919a4285/">
             <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"/>
             </a>
         </td>
