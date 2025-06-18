@@ -19,7 +19,7 @@ const server = http.createServer(app)
 
 const io = new Server(server, {
 	cors: {
-		origin: "https://dot-slash-oigb.vercel.app",
+		origin: "*",
 	},
 	maxHttpBufferSize: 1e8,
 	pingTimeout: 60000,
