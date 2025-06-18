@@ -77,25 +77,27 @@ function HomePage() {
             <Footer />
 
             {/* Enhanced floating animation */}
-            <style jsx>{`
-                @keyframes float {
-                    0%, 100% { 
-                        transform: translateY(0px) rotate(0deg); 
+            <style>
+                {`
+                    @keyframes float {
+                        0%, 100% { 
+                            transform: translateY(0px) rotate(0deg); 
+                        }
+                        25% { 
+                            transform: translateY(-12px) rotate(0.5deg); 
+                        }
+                        50% { 
+                            transform: translateY(-20px) rotate(0deg); 
+                        }
+                        75% { 
+                            transform: translateY(-8px) rotate(-0.5deg); 
+                        }
                     }
-                    25% { 
-                        transform: translateY(-12px) rotate(0.5deg); 
+                    .animate-float {
+                        animation: float 6s ease-in-out infinite;
                     }
-                    50% { 
-                        transform: translateY(-20px) rotate(0deg); 
-                    }
-                    75% { 
-                        transform: translateY(-8px) rotate(-0.5deg); 
-                    }
-                }
-                .animate-float {
-                    animation: float 6s ease-in-out infinite;
-                }
-            `}</style>
+                `}
+            </style>
         </div>
     )
 }
