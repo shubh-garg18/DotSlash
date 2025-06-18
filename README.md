@@ -118,25 +118,16 @@ You can view the live preview of the project [here](https://dot-slash-oigb.verce
    http://localhost:5173/
    ```
 
-### 🎥 Need help with the setup?
-👉 Watch [this video](https://youtu.be/setup-guide) for a step-by-step guide.
-
 ## 🔮 Features for Next Release
 
 - **Admin Permission:** Implement an admin permission system to manage user access levels and control over certain platform features.
 - **Enhanced Collaboration:** Advanced collaboration features with improved real-time synchronization.
 
-## 🤝 Contribute
-
-We welcome contributions to make DotSlash even better! Follow the [contribution guidelines](CONTRIBUTING.md) to get started.
 
 ## 🌟 Support Us
 
 If you find this helpful or valuable, please consider 🌟 starring the repository. It helps us gain visibility and encourages further development.
 
-## 🧾 License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ## 🌟 Appreciation for Resources
 
@@ -173,20 +164,20 @@ Special thanks to:
     </tr>
     <tr>
         <td align="center">
-            <a href="https://github.com/tanishqtyagi">
+            <a href="https://github.com/tanishq-t">
             <img src="https://img.shields.io/badge/GitHub-100000.svg?style=for-the-badge&logo=github&logoColor=white"/>
             </a>
             <br/>
-            <a href="https://linkedin.com/in/tanishqtyagi">
+            <a href="https://linkedin.com/in/tanishq-t">
             <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"/>
             </a>
         </td>
         <td align="center">
-            <a href="https://github.com/shubhgarg">
+            <a href="https://github.com/shubh-garg18">
             <img src="https://img.shields.io/badge/GitHub-100000.svg?style=for-the-badge&logo=github&logoColor=white"/>
             </a>
             <br/>
-            <a href="https://linkedin.com/in/shubhgarg">
+            <a href="https://linkedin.com/in/shubh-garg18">
             <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white"/>
             </a>
         </td>
