@@ -1,4 +1,4 @@
-![logo](https://github.com/your-username/DotSlash/assets/100127570/d1ff7f52-a692-4d51-b281-358aeab9156e)
+![logo](https://github.com/tanishq-t/DotSlash/screenshots/Screenshot 2025-06-19 at 12.08.14 AM.png)
 
 A collaborative, real-time code editor where users can seamlessly code together. It provides a platform for multiple users to enter a room, share a unique room ID, and collaborate on code simultaneously.
 
