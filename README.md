@@ -1,30 +1,30 @@
-![logo](https://github.com/tanishq-t/DotSlash/screenshots/Screenshot 2025-06-19 at 12.08.14 AM.png)
+![logo](https://github.com/tanishq-t/DotSlash/blob/main/screenshots/Screenshot%202025-06-19%20at%2012.08.14%E2%80%AFAM.png)
 
 A collaborative, real-time code editor where users can seamlessly code together. It provides a platform for multiple users to enter a room, share a unique room ID, and collaborate on code simultaneously.
 
 ## 📸 Screenshots
 
 <div align="center">
-  <img src="https://github.com/your-username/DotSlash/assets/screenshot1.png" alt="DotSlash Main Interface" width="800"/>
-  <p><em>Main coding interface with real-time collaboration</em></p>
+  <img src="https://github.com/tanishq-t/DotSlash/blob/main/screenshots/Screenshot%202025-06-19%20at%2012.08.27%E2%80%AFAM.png" alt="DotSlash Home Page" width="800"/>
+  <p><em>Clean and intuitive home page interface</em></p>
 </div>
 
 <div align="center">
-  <img src="https://github.com/your-username/DotSlash/assets/screenshot2.png" alt="Code Execution" width="800"/>
-  <p><em>Code execution and output display</em></p>
+  <img src="https://github.com/tanishq-t/DotSlash/blob/main/screenshots/Screenshot%202025-06-19%20at%2012.09.04%E2%80%AFAM.png" alt="Terminal Integration" width="800"/>
+  <p><em>Integrated terminal for code execution and debugging</em></p>
 </div>
 
 <div align="center">
-  <img src="https://github.com/your-username/DotSlash/assets/screenshot3.png" alt="Collaborative Features" width="800"/>
-  <p><em>Real-time chat and user presence indicators</em></p>
+  <img src="https://github.com/tanishq-t/DotSlash/blob/main/screenshots/Screenshot%202025-06-19%20at%2012.09.46%E2%80%AFAM.png" alt="AI Copilot Chat" width="800"/>
+  <p><em>AI-powered Copilot for intelligent code assistance</em></p>
 </div>
 
-![GitHub contributors](https://img.shields.io/github/contributors/your-username/DotSlash?style=for-the-badge&color=48bf21)
-![GitHub Repo stars](https://img.shields.io/github/stars/your-username/DotSlash?style=for-the-badge)
-![GitHub issues](https://img.shields.io/github/issues/your-username/DotSlash?style=for-the-badge&color=d7af2d)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/your-username/DotSlash?style=for-the-badge&color=f47373)
-![GitHub License](https://img.shields.io/github/license/your-username/DotSlash?style=for-the-badge&color=e67234)
-![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fyour-username%2FDotSlash&label=Repo%20Views&countColor=%2337d67a&labelStyle=upper)
+![GitHub contributors](https://img.shields.io/github/contributors/tanishq-t/DotSlash?style=for-the-badge&color=48bf21)
+![GitHub Repo stars](https://img.shields.io/github/stars/tanishq-t/DotSlash?style=for-the-badge)
+![GitHub issues](https://img.shields.io/github/issues/tanishq-t/DotSlash?style=for-the-badge&color=d7af2d)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/tanishq-t/DotSlash?style=for-the-badge&color=f47373)
+![GitHub License](https://img.shields.io/github/license/tanishq-t/DotSlash?style=for-the-badge&color=e67234)
+![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Ftanishq-t%2FDotSlash&label=Repo%20Views&countColor=%2337d67a&labelStyle=upper)
 
 ## 🔮 Features
 
@@ -69,7 +69,7 @@ You can view the live preview of the project [here](https://dot-slash-oigb.verce
 1. **Fork this repository:** Click the Fork button located in the top-right corner of this page.
 2. **Clone the repository:**
    ```bash
-   git clone https://github.com/<your-username>/DotSlash.git
+   git clone https://github.com/tanishq-t/DotSlash.git
    ```
 3. **Set up the environment:**
    Create `.env` files in both client and server directories:
